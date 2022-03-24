@@ -1,0 +1,140 @@
+:root {
+  --transition-all: background-color 0.1s linear, color 0.1s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 15px;
+}
+
+#root,
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  background-color: hsl(216, 12%, 8%);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: hsl(213, 19%, 18%);
+  width: 350px;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.rating-component > * {
+  width: 100%;
+}
+
+.rating-component > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: #fff;
+}
+.subtext {
+  color: hsl(217, 12%, 63%);
+  line-height: 1.25rem;
+}
+
+.circle-bg {
+  background-color: hsla(216, 12%, 54%, 0.25);
+  color: hsl(216, 12%, 54%);
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+  border-radius: 100px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-values-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating-value {
+  cursor: pointer;
+  transition: var(--transition-all);
+}
+.rating-value:hover {
+  background-color: hsl(216, 12%, 54%);
+  color: #fff;
+}
+.rating-value:focus,
+.rating-value:active {
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 0;
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: var(--transition-all);
+}
+
+.submit-btn:hover {
+  background-color: #fff;
+  color: hsl(25, 97%, 53%);
+}
+.submit-btn:disabled {
+  background-color: hsla(217, 12%, 63%, 0.3);
+  color: hsl(216, 12%, 54%);
+}
+
+.ty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ty-container > :not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.illustration {
+  width: 120px;
+}
+
+.you-rated {
+  background-color: hsla(217, 12%, 63%, 0.25);
+  color: hsl(25, 97%, 53%, 0.75);
+  padding: 0.25rem 0.875rem;
+  font-size: 0.8rem;
+  border-radius: 100px;
+}
+
+.ty-container .subtext,
+.ty-container .title {
+  text-align: center;
+}
+
+.ty-container .title {
+  margin-bottom: 0.75rem;
+}
